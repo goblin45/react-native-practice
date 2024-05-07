@@ -18,8 +18,6 @@ Set
 1. `"main" : "expo-router/entry"` in `package.json` 
 2. `"scheme": "app-name"` in `app.json`
 
-Copy the contents of `app.js`, delete the file and create a new file `_layout.jsx` inside a new folder `app` and paste them down there.
-
 Start the development server with - 
 
 ```bash
