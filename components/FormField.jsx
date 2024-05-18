@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 
 import { icons } from '../constants'
@@ -17,18 +17,19 @@ const FormField = ({ title, value, placeholder, handleChangeText, otherStyles, .
                     className="flex-1 text-white font-psemibold text-base"
                     value={value}
                     placeholder={placeholder}
-                    placeHolderTextColor="7b7b8b"
+                    placeholderTextColor="#7b7b8b"
                     onChangeText={handleChangeText}
-                    secureTextEntry={title==='password' && !showPassword}
+                    secureTextEntry={title==='Password' && !showPassword}
                 />
                 {
                     title === 'Password' && (
-                        <TouchableOpacity 
-                            className="w-6 h-6"
-                            resizeMode="contain"
+                        <TouchableOpacity
+                            className="w-8 h-8 flex items-center justify-center"
                             onPress={() => setShowPassword(prev => !prev)}
                         >
                             <Image
+                                className="w-full h-full"
+                                resizeMode="contain"
                                 source={showPassword ? icons.eyeHide : icons.eye}
                             />
                         </TouchableOpacity>
